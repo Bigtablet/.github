@@ -20,7 +20,12 @@ Contributors are classified into **external contributors** (hereinafter referred
    a. Issues related to library or dependency versions  
    b. Issues that conflict with the team’s internal code convention principles  
    c. Issues related to changing the technology stack in use  
-   d. Issues related to CI/CD or other deployment files  
+   d. Issues related to CI/CD or other deployment files
+6. The pull request and issue guidelines are written in Korean; however, contributors from abroad may submit them in English.
+
+- [Pull Request Guideline](https://github.com/Bigtablet/.github/blob/main/PULL_REQUEST_TEMPLATE.md)
+- [Issue Guideline](https://github.com/Bigtablet/.github/blob/main/ISSUE_TEMPLATE.md)
+- [Commit Guideline](https://github.com/Bigtablet/.github/blob/main/COMMIT_GUIDELINE.md)
 
 ---
 
@@ -37,4 +42,8 @@ Contributors are classified into **external contributors** (hereinafter referred
    a. 라이브러리 또는 의존성 버전 이슈  
    b. 팀 내에서 사용되는 코드 컨벤션 원칙에 어긋난 이슈  
    c. 사용 기술 스택 변경에 관한 이슈  
-   d. CI/CD 또는 기타 배포 파일 관련 이슈  
+   d. CI/CD 또는 기타 배포 파일 관련 이슈
+
+- [Pull Request Guideline](https://github.com/Bigtablet/.github/blob/main/PULL_REQUEST_TEMPLATE.md)
+- [Issue Guideline](https://github.com/Bigtablet/.github/blob/main/ISSUE_TEMPLATE.md)
+- [Commit Guideline](https://github.com/Bigtablet/.github/blob/main/COMMIT_GUIDELINE.md)
