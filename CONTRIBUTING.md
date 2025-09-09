@@ -1,6 +1,6 @@
 # Open Source Contribution Principles
 
-## Table of Contents
+## Table of Contents / 목차
 - [English Version](#english-version)
 - [한국어 버전](#한국어-버전)
 
