@@ -4,6 +4,6 @@
 
 > 라이선스 조항과 기본 약관들을 아래 링크 또는 `.github` 저장소에서 직접 확인하실 수 있습니다. 약관과 라이선스 조항들을 숙지하지 않아 발생하는 모든 문제들은 사용자 개인에게 있습니다.
 
-[License](https://github.com/Bigtablet/.github/blob/main/BIGTABLET_LICENSE.md)
-
-[Term](https://github.com/Bigtablet/.github/blob/main/README.md)
+- [License](./LICENSE.md)
+- [Contributing Guidelines](./CONTRIBUTING.md)
+- [Basic Term](./README.md)
