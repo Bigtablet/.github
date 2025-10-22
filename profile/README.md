@@ -1,4 +1,4 @@
-<img width="1800" height="300" alt="Bigtablet_Banner" src="https://github.com/user-attachments/assets/4051566b-103c-462d-a663-213ef7d056d4" /> <br>
+<img width="1800" height="300" alt="Image" src="https://github.com/user-attachments/assets/420a15cc-5be3-447f-9c64-068e946cb118" /> <br>
 
 > You can review the license provisions and general terms at the link below or directly in the `.github` repository. Any issues arising from not reviewing or understanding the terms and license provisions are the sole responsibility of the user.
 
