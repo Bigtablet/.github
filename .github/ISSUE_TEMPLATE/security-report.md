@@ -2,7 +2,7 @@
 name: "Security Report"
 about: "보안 이슈를 제보합니다"
 title: "[SECURITY] "
-labels: "security"
+labels: "Bug, Hotfix"
 assignees: ""
 ---
 

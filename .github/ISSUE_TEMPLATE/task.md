@@ -2,7 +2,7 @@
 name: "Task"
 about: "작업을 등록합니다"
 title: "[TASK] "
-labels: "task"
+labels: "Fix"
 assignees: ""
 ---
 

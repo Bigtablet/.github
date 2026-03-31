@@ -2,7 +2,7 @@
 name: "Feature Request"
 about: "새로운 기능을 요청합니다"
 title: "[FEATURE] "
-labels: "enhancement"
+labels: "Feature"
 assignees: ""
 ---
 
