@@ -1,49 +1,51 @@
-# Open Source Contribution Principles
+# Contributing to Bigtablet Open Source
 
-## Table of Contents / 목차
-- [English Version](#english-version)
-- [한국어 버전](#한국어-버전)
+**English** | [한국어](https://github.com/Bigtablet/.github/blob/main/CONTRIBUTING.ko.md)
 
----
+Thank you for your interest in contributing to open source published by **Bigtablet Inc.** (the "Company"). This document covers the essentials every contributor should know before getting started. Project-specific conventions (architecture, code style, etc.) live in each repository's own documentation.
 
-## English Version
+> Any issues arising from failure to follow these principles are the sole responsibility of the contributor.
 
-These are the principles that must be followed when contributing to open source provided by **Bigtablet Inc.** (hereinafter referred to as the "Company").  
-Any issues arising from failure to comply with these principles are the sole responsibility of the contributor.  
-Contributors are classified into **external contributors** (hereinafter referred to as "Contributors") and **Company-affiliated contributors** (hereinafter referred to as "Maintainers").
+## Contributors and Maintainers
 
-1. Contributors must comply with the common pull request, issue, and commit guidelines specified in the `.github` repository.  
-2. Merging without the approval of a Maintainer is prohibited. All merges must be performed only after review and approval by a Maintainer.  
-3. If a Contributor intentionally or accidentally attempts to merge or merges malicious code, viruses, ransomware, or anything else that could negatively affect the software, the Contributor will be held liable for any resulting damages.  
-4. Contributions proposed by a Contributor may not necessarily be reflected in the actual software.  
-5. The following types of contributions are not permitted. Any issues or pull requests created regarding these matters will be deleted immediately:  
-   a. Issues related to library or dependency versions  
-   b. Issues that conflict with the team’s internal code convention principles  
-   c. Issues related to changing the technology stack in use  
-   d. Issues related to CI/CD or other deployment files
-6. The pull request and issue guidelines are written in Korean; however, contributors from abroad may submit them in English.
+- **Contributor** — an external contributor. Must follow the shared pull request, issue, and commit guidelines in this `.github` repository.
+- **Maintainer** — a Company-affiliated contributor with review, approval, and merge authority.
 
-- [Pull Request Guideline](https://github.com/Bigtablet/.github/blob/main/PULL_REQUEST_TEMPLATE.md)
-- [Issue Guideline](https://github.com/Bigtablet/.github/blob/main/ISSUE_TEMPLATE.md)
-- [Commit Guideline](https://github.com/Bigtablet/.github/blob/main/COMMIT_GUIDELINE.md)
+## Contribution Principles
 
----
+1. Follow the shared pull request, issue, and commit guidelines defined in this `.github` repository.
+2. **Merging without a Maintainer's approval is prohibited.** Every change is merged only after a Maintainer has reviewed and approved it.
+3. If a Contributor — intentionally or by mistake — attempts to merge or merges malicious code, viruses, ransomware, or anything else that could harm the software, that Contributor is liable for any resulting damages.
+4. Anything a Contributor proposes may not necessarily be reflected in the actual software.
+5. The following contributions are **not allowed**. Issues or pull requests created about them are deleted immediately:
+   - Library or dependency version changes
+   - Anything that conflicts with the team's code convention principles
+   - Changes to the technology stack in use
+   - CI/CD or other deployment-file changes
 
-## 한국어 버전
+## Language
 
-**Bigtablet Inc.(이하 회사)** 에서 제공하는 오픈소스에 기여하고자 하는 경우 준수해야 할 원칙들이며 이를 따르지 않아 발생하는 문제들은 기여자 개인에게 있습니다.  
-또한 기여자는 **외부 기여자**(이하 "기여자")와 **회사 소속 기여자**(이하 "관리자")로 구분합니다.
+- Pull request and issue guidelines are written in **Korean** by default.
+- Contributors from abroad may submit them in **English**.
+- **Commit messages are always written in English** (see the [Commit Guideline](https://github.com/Bigtablet/.github/blob/main/COMMIT_GUIDELINE.md)).
 
-1. 기여자는 `.github` 저장소에 지정된 공용 풀리퀘스트/이슈/커밋 원칙을 준수해야 합니다.  
-2. 관리자의 허가 없는 병합을 금합니다. 반드시 관리자에게 리뷰 및 승인이 이루어진 후 병합을 진행해야 합니다.  
-3. 기여자가 고의 또는 실수로 악성 코드, 바이러스, 랜섬웨어 등 기타 소프트웨어에 악영향을 줄 수 있는 사항을 병합하려고 시도하거나 병합할 경우 이에 따라 발생한 피해 보상이 청구됩니다.  
-4. 기여자가 제시한 사항이 실제 소프트웨어에는 반영되지 않을 수 있습니다.  
-5. 아래 항목에 해당하는 사항들은 기여자가 기여할 수 없습니다. 해당 사항에 대해 생성하는 이슈, 풀리퀘스트는 즉시 삭제 처리됩니다.  
-   a. 라이브러리 또는 의존성 버전 이슈  
-   b. 팀 내에서 사용되는 코드 컨벤션 원칙에 어긋난 이슈  
-   c. 사용 기술 스택 변경에 관한 이슈  
-   d. CI/CD 또는 기타 배포 파일 관련 이슈
+## How to Contribute
 
-- [Pull Request Guideline](https://github.com/Bigtablet/.github/blob/main/PULL_REQUEST_TEMPLATE.md)
-- [Issue Guideline](https://github.com/Bigtablet/.github/blob/main/ISSUE_TEMPLATE.md)
-- [Commit Guideline](https://github.com/Bigtablet/.github/blob/main/COMMIT_GUIDELINE.md)
+1. **Open an issue** using one of the [issue templates](https://github.com/Bigtablet/.github/tree/main/.github/ISSUE_TEMPLATE) (blank issues are disabled). Make sure it isn't one of the prohibited contributions listed above.
+2. **Create a branch** named `label/domain` (e.g. `feat/auth`, `fix/user`, `docs/readme`). External contributors fork the repository first, then branch off its base branch. The `label` follows the same scheme as the commit labels.
+3. **Make your changes and commit** in English using the `label: message` format. See the [Commit Guideline](https://github.com/Bigtablet/.github/blob/main/COMMIT_GUIDELINE.md) for labels and rules.
+4. **Open a pull request** using the [pull request template](https://github.com/Bigtablet/.github/blob/main/.github/PULL_REQUEST_TEMPLATE.md). Link the related issue with `Closes #N` and request a review from a Maintainer.
+5. **Review & merge** — a Maintainer reviews the pull request and merges it after approval and once CI passes. Do not merge your own work.
+
+## License
+
+This open source is published under the [Bigtablet Inc. Open Source License](https://github.com/Bigtablet/.github/blob/main/BIGTABLET_LICENSE.md) — **non-commercial use, attribution required**. Cloning, forking, or otherwise copying a repository is deemed acceptance of all license terms. Please review the full text before contributing.
+
+## Shared Documents
+
+| Document | Link |
+|----------|------|
+| Open Source License | [BIGTABLET_LICENSE.md](https://github.com/Bigtablet/.github/blob/main/BIGTABLET_LICENSE.md) |
+| Commit Guideline | [COMMIT_GUIDELINE.md](https://github.com/Bigtablet/.github/blob/main/COMMIT_GUIDELINE.md) |
+| Pull Request Template | [PULL_REQUEST_TEMPLATE.md](https://github.com/Bigtablet/.github/blob/main/.github/PULL_REQUEST_TEMPLATE.md) |
+| Issue Templates | [ISSUE_TEMPLATE](https://github.com/Bigtablet/.github/tree/main/.github/ISSUE_TEMPLATE) |
