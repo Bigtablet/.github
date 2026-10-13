@@ -1,0 +1,44 @@
+# Org-wide secret scan, enforced on every repository through an org ruleset
+# ("Require workflows to pass"). Scans only the commits a PR adds, so it stays fast.
+#
+# A repository can tune rules or allowlist false positives with its own
+# `.gitleaks.toml` at the repository root (gitleaks picks it up automatically).
+name: gitleaks
+
+on:
+  pull_request:
+  merge_group:
+
+permissions:
+  contents: read
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0
+        with:
+          fetch-depth: 0
+
+      # The CLI is MIT licensed and needs no license key (gitleaks-action does for orgs).
+      - name: Install gitleaks
+        env:
+          VER: 8.30.1
+          SHA256: 551f6fc83ea457d62a0d98237cbad105af8d557003051f41f3e7ca7b3f2470eb
+        run: |
+          curl -sSfL -o gitleaks.tgz \
+            "https://github.com/gitleaks/gitleaks/releases/download/v${VER}/gitleaks_${VER}_linux_x64.tar.gz"
+          echo "${SHA256}  gitleaks.tgz" | sha256sum -c -
+          tar -xzf gitleaks.tgz gitleaks
+
+      - name: Scan commits added by this PR
+        env:
+          BASE: ${{ github.event.pull_request.base.sha || github.event.merge_group.base_sha }}
+          HEAD: ${{ github.event.pull_request.head.sha || github.event.merge_group.head_sha }}
+        run: |
+          ./gitleaks git . \
+            --log-opts="${BASE}..${HEAD}" \
+            --redact \
+            --no-banner \
+            --exit-code 1
