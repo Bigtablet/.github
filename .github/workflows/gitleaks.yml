@@ -14,7 +14,9 @@ permissions:
 
 jobs:
   scan:
-    runs-on: ubuntu-latest
+    # 2026-10-25: intranet 은 PR 이 하루 1,500건 안팎이라 이 검사만으로 GitHub 호스팅 분(월 50,000분 무료)을
+    # 넘겨 과금됐다 → intranet 은 자체 호스팅(Azure CI 러너, 경량 라벨)에서, 나머지 저장소는 그대로 ubuntu-latest.
+    runs-on: ${{ github.repository == 'Bigtablet/intranet' && fromJSON('["self-hosted","bigtablet-light"]') || 'ubuntu-latest' }}
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0
