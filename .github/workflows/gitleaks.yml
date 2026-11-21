@@ -25,12 +25,19 @@ jobs:
 
       # The CLI is MIT licensed and needs no license key (gitleaks-action does for orgs).
       - name: Install gitleaks
+        # 2026-11-21: intranet CI 러너에 ARM(D16ps_v6, aarch64) VM 이 섞인다 → 아키텍처별 바이너리·체크섬.
         env:
           VER: 8.30.1
-          SHA256: 551f6fc83ea457d62a0d98237cbad105af8d557003051f41f3e7ca7b3f2470eb
+          SHA256_X64: 551f6fc83ea457d62a0d98237cbad105af8d557003051f41f3e7ca7b3f2470eb
+          SHA256_ARM64: e4a487ee7ccd7d3a7f7ec08657610aa3606637dab924210b3aee62570fb4b080
         run: |
+          case "$(uname -m)" in
+            x86_64)        ARCH=x64;   SHA256="$SHA256_X64" ;;
+            aarch64|arm64) ARCH=arm64; SHA256="$SHA256_ARM64" ;;
+            *) echo "::error::지원하지 않는 러너 아키텍처: $(uname -m)"; exit 1 ;;
+          esac
           curl -sSfL -o gitleaks.tgz \
-            "https://github.com/gitleaks/gitleaks/releases/download/v${VER}/gitleaks_${VER}_linux_x64.tar.gz"
+            "https://github.com/gitleaks/gitleaks/releases/download/v${VER}/gitleaks_${VER}_linux_${ARCH}.tar.gz"
           echo "${SHA256}  gitleaks.tgz" | sha256sum -c -
           tar -xzf gitleaks.tgz gitleaks
 
